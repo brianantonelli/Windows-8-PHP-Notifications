@@ -100,7 +100,7 @@ class WPN{
             return $this->post_tile($uri, $xml_data, $type, $tileTag);
         }
         else if($code == 410 || $code == 404){
-            return new WPNResponse('Expired or invalid URI', $code, false);
+            return new WPNResponse('Expired or invalid URI', $code, true);
         }
         else{
             return new WPNResponse('Unknown error while sending message', $code, true);
